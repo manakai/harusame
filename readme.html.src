@@ -51,6 +51,16 @@ files.</span>
 <span lang=ja>最新情報</span>
 </h2>
 
+<p data-lang-container>
+
+<span lang=en><a href="harusame-commit" rel=feed
+type="application/atom+xml">An Atom feed for ChangeLog diffs</a> is
+available.</span>
+
+<span lang=ja><a href="harusame-commit" rel=feed
+type="application/atom+xml">変更履歴差分の Atom
+フィード</a>はじめました。</span>
+
 <ul>
 
 <li><time>2008-10-21</time>: 

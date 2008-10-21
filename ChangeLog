@@ -1,5 +1,11 @@
 2008-10-21  Wakaba  <wakaba@suika.fam.cx>
 
+	* ,htaccess: Configured for the Atom feed.
+
+	* readme.html.src: Link to feed added.
+
+2008-10-21  Wakaba  <wakaba@suika.fam.cx>
+
 	* readme.html.src: New file.
 
 	* Makefile: New file.

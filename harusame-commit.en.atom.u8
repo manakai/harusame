@@ -1,0 +1,16 @@
+<feed xml:lang="en" xmlns="http://www.w3.org/2005/Atom"><id>http://suika.fam.cx/www/harusame/harusame-commit</id><title>Harusame ChangeLog diffs</title><updated>2008-10-21T08:37:01Z</updated><link href="http://suika.fam.cx/www/harusame/harusame-commit" hreflang="en" rel="self" type="application/atom+xml"></link><link href="http://suika.fam.cx/www/harusame/readme" rel="related"></link><link href="http://suika.fam.cx/www/harusame/readme#license" rel="license"></link><rights>This feed is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</rights><entry xml:id="entry-1224578221"><id>http://suika.fam.cx/www/harusame/harusame-commit#entry-1224578221</id><title>2008-10-21 Wakaba</title><updated>2008-10-21T08:37:00Z</updated><author><name>Wakaba</name><email>wakaba@suika.fam.cx</email></author><content type="text">++ harusame/bin/ChangeLog	21 Oct 2008 08:36:52 -0000
+	* harusame.pl: New script.
+
+2008-10-21  Wakaba  &lt;wakaba@suika.fam.cx&gt;
+
+++ ChangeLog	21 Oct 2008 08:36:30 -0000
+	* cvscommit.sh, mkcommitfeed.pl: New files (copied from
+	manakai-core).
+
+2008-10-21  Wakaba  &lt;wakaba@suika.fam.cx&gt;
+
+	* bin/: New directory.
+
+2008-10-21  Wakaba  &lt;wakaba@suika.fam.cx&gt;
+
+</content></entry></feed>

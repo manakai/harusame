@@ -18,7 +18,7 @@ pod2usage (-exitval => 1, -verbose => 1,
       unless defined $lang;
 $lang =~ tr/A-Z/a-z/; ## ASCII case-insensitive.
 
-use Message::DOM::DOMImplementation;
+require Message::DOM::DOMImplementation;
 my $dom = Message::DOM::DOMImplementation->new;
 
 my $doc = $dom->create_document;
@@ -93,4 +93,77 @@ sub get_content_element ($) {
   return $c_el;
 } # get_content_element
 
-## $Date: 2008/10/21 08:36:59 $
+__END__
+
+=head1 NAME
+
+harusame.pl - Multilingual Web page management tool
+
+=head1 SYNOPSIS
+
+  perl harusame.pl --lang LANGCODE < input.html > output.html
+
+  perl harusame.pl --help
+
+=head1 DESCRIPTION
+
+The C<harusame.pl> script extracts a version of the HTML document
+written in the specified natural language, from a source HTML document
+that contains paragraphs in multiple natural languages.
+
+The document management of a multilingual Web site where there are
+multiple versions of a (conceptually same) document is somewhat
+difficult in general.  If the author of an HTML document wants to edit
+a part of the document, then he or she has to ensure not to forget
+updating translations at the same time, otherwise documents in
+different language versions also differ in their content versions.
+
+Using the C<harusame.pl>, one can generate versions of an HTML
+document in different language from one source HTML document that
+contains paragraphs written in all of those languages, such that
+authors no longer have to manage different content versions and
+different language versions in separate files.
+
+=head1 ARGUMENTS
+
+The source document must be provided to the script using the
+I<standard input>.  It must be encoded in UTF-8.
+
+The script outputs the generated document encoded in UTF-8 to the
+I<standard output>.
+
+Following command-line options are available to this script:
+
+=over 4
+
+=item C<--help>
+
+Show the help message and exit.
+
+=item C<--lang I<LANGCODE>> (B<REQUIRED>)
+
+The language of the version to generate.  This option must be
+specified.  The value must be a value that is valid for HTML
+C<lang=""> attribute.
+
+=back
+
+=head1 SEE ALSO
+
+Readme L<http://suika.fam.cx/www/harusame/readme>.  How to mark up the
+source HTML document is described in this document.
+
+=head1 AUTHOR
+
+Wakaba <w@suika.fam.cx>.
+
+=head1 LICENSE
+
+Copyright 2008 Wakaba <w@suika.fam.cx>.
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
+=cut
+
+## $Date: 2008/10/21 10:14:26 $

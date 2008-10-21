@@ -1,0 +1,221 @@
+<!DOCTYPE HTML><html lang="en"><head><title data-lang-content="title" lang="en">Harusame — Multilingual
+Web page management tool</title>
+<link href="#author" rel="author">
+<link href="#license" rel="license">
+<link href="harusame-commit" rel="feed" type="application/atom+xml">
+<link href="http://suika.fam.cx/www/style/html/xhtml" rel="stylesheet">
+
+</head><body><h1 data-lang-container="" id="title"><span lang="en"><i lang="ja">Harusame</i> — Multilingual
+Web page management tool</span></h1>
+
+<div class="section" id="introduction">
+<h2 data-lang-container=""><span lang="en">What's this?</span></h2>
+
+<p>
+
+<span lang="en"><b><i lang="ja">Harusame</i></b> extracts a version of the
+HTML document written in the specified natural language, from a source
+HTML document that contains paragraphs in multiple natural
+languages.</span>
+
+</p><p>
+
+<span lang="en">The document management of a multilingual Web site where
+there are multiple versions of a (conceptually same) document is
+somewhat difficult in general. If the author of an HTML document wants
+to edit a part of the document, then he or she has to ensure not to
+forget updating translations at the same time, otherwise documents in
+different language versions also differ in their content versions.</span>
+
+</p><p>
+
+<span lang="en">Using <b><i lang="ja">harusame</i></b>, one can generate
+versions of an HTML document in different language from one source
+HTML document that contains paragraphs written in all of those
+languages, such that authors no longer have to manage different
+content versions and different language versions in separate
+files.</span>
+
+</p></div>
+
+<div class="section" id="news">
+<h2 data-lang-container=""><span lang="en">What's new?</span></h2>
+
+<ul>
+
+<li><time>2008-10-21</time>: 
+  <span lang="en">The first version is released!</span>
+
+</li></ul>
+</div>
+
+<div class="section" id="usage">
+<h2 data-lang-container=""><span lang="en">Usage</span></h2>
+
+<ol>
+
+<li>
+
+<p data-lang-container=""><span lang="en">First, prepare a source HTML document
+<var>html-document.src</var>.  The document can be marked up in HTML
+as usual, except for <a href="#markup-reference">the special markup
+for <i lang="ja">harusame</i></a> to identify alternative blocks written
+in various languages.</span></p><p data-lang-container=""><span lang="en">An input document might look like:</span></p><pre class="example" lang="mul">
+<code>&lt;!DOCTYPE HTML&gt;
+&lt;html lang=mul&gt;
+&lt;title&gt;Example Document&lt;/title&gt;
+
+&lt;h1 <mark>data-lang-container</mark>&gt;
+&lt;span <mark>lang=en</mark>&gt;Example document&lt;/span&gt;
+&lt;span <mark>lang=ja</mark>&gt;文書の例&lt;/span&gt;
+&lt;/h1&gt;
+
+&lt;p <mark>data-lang-container</mark>&gt;
+&lt;span <mark>lang=en</mark>&gt;This is an example of document with multiple languages.&lt;/span&gt;
+&lt;span <mark>lang=ja</mark>&gt;これは複数の言語で記述された文書の例です。&lt;/span&gt;
+</code></pre>
+
+</li><li>
+
+<p>Then, invoke the <code>harusame.pl</code> for each language to
+generate, as:
+
+</p><pre lang="en">
+$ <kbd>perl harusame.pl --lang en &lt; <var>html-document.src</var> &gt; <var>html-document.en</var></kbd>
+$ <kbd>perl harusame.pl --lang ja &lt; <var>html-document.src</var> &gt; <var>html-document.ja</var></kbd></pre>
+
+<p>For more information on the <code>harusame.pl</code> command-line
+options, see <a href="bin/harusame.html">its documentation</a>.
+
+</p></li></ol>
+
+</div>
+
+<div class="section" id="markup-reference">
+<h2><i lang="ja">Harusame</i> Markup Reference</h2>
+
+<p>Special markup for <i lang="ja">harusame</i> processing is
+represented as <code>data-lang-<var>*</var></code> attributes on HTML
+elements, as follows:
+
+</p><dl>
+
+<dt lang="en"><dfn id="attr-data-lang-container"><code>data-lang-container</code></dfn>
+
+</dt><dd>
+
+<p>If this attribute is specified to an HTML element, then it is
+treated as a container element that contains versions of the content
+in various languages.
+
+</p><p>An element with this attribute must contain one or more HTML
+elements.  One of them, whose language (<code>lang</code> attribute
+value) matches with the language specified as <code>--lang</code>
+command-line option, is <i>selected</i>.  If there are more than one
+such elements, then the first one is <i>selected</i>.  If there is no
+element whose language matches to the <code>--lang</code> option, then
+the first element (of whatever language) is <i>selected</i>.
+
+</p><p>If the attribute value is <code>replace</code>, then the element
+itself is replaced by the <i>selected</i> element.  Otherwise, the
+<em>content</em> of the element is replaced by the <i>selected</i>
+element.
+
+</p></dd><dt lang="en"><dfn id="attr-data-lang-content"><code>data-lang-content</code></dfn>
+
+<p>If this attribute is specified to an HTML element, then its content
+is replaced by the content of another element.
+
+</p><p>If this attribute is specified, its value must be an ID of another
+HTML element in the document.
+
+</p><p>A child element of the element addressed by the ID is
+<i>selected</i> in the similar way to the
+<code>data-lang-container</code> attribute.  Then, the content of the
+element with the <code>data-lang-content</code> attribute is replaced
+by the text content (the value of the <code>textContent</code> DOM
+attribute) of the <i>selected</i> element.
+
+</p><p>If the element addressed by the ID has
+<code>data-lang-declaration</code> attribute, then the element will be
+removed from the document at the end of the whole processing.
+
+</p><p>This attribute is useful when an HTML element does not allow to
+insert elements as its content.  For example, the content model of the
+<code>title</code> element does not allow child elements, so that this
+attribute can be used to provide translations to the
+<code>title</code> element content like this:
+
+</p><pre class="example" lang="mul">
+<code>&lt;title <mark>data-lang-content="title-content"</mark>&gt;Example&lt;/title&gt;
+
+&lt;div <mark>id="title-content" data-lang-declaration</mark>&gt;
+&lt;span lang=en&gt;Example&lt;/span&gt;
+&lt;span lang=ja&gt;例&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+</dt><dt lang="en"><dfn id="attr-data-lang-declaration"><code>data-lang-declaration</code></dfn>
+
+</dt><dd>
+
+<p>This attribute indicates that the element declares a set of
+alternatives in various languages.
+
+</p><p>This attribute must not be used for an element that is not pointed
+by a <code>data-lang-content</code> attribute in the same document.
+
+</p></dd></dl>
+
+</div>
+
+<div class="section" id="examples">
+<h2 data-lang-container=""><span lang="en">Example</span></h2>
+
+<p data-lang-container=""><span lang="en">This document is itself prepared using <i lang="ja">harusame</i>.  <a href="readme.html.src">See the source
+document to learn it can be used</a>.</span></p></div>
+
+<div class="section" id="dependency">
+<h2>Dependency</h2>
+
+<p>This software requires Perl 5.8 or later, as well as <a href="http://suika.fam.cx/www/manakai-core/doc/web/">manakai-core</a>
+and <a href="http://suika.fam.cx/www/markup/html/whatpm/readme">Whatpm</a>
+packages.
+
+</p></div>
+
+<div class="section" id="download">
+<h2>Download</h2>
+
+<p>This software is available from <a href="http://suika.fam.cx/gate/cvs/webroot/www/harusame/">the CVS
+repository</a>.
+
+</p><p><a href="http://suika.fam.cx/gate/cvs/webroot/www/harusame/harusame.tar.gz?tarball=1">The
+tarball for the latest version</a> is also available.
+
+</p><p>There is no installer.  Just copy the script file to some
+directory.
+
+</p></div>
+
+<div class="section" id="author">
+<h2 data-lang-container=""><span lang="en">Author</span></h2>
+
+<p><a href="http://suika.fam.cx/~wakaba/who?" rel="author">Wakaba</a>.</p>
+</div>
+
+<div class="section" id="license">
+<h2>License</h2>
+
+<p>Copyright 2008 <a href="http://suika.fam.cx/~wakaba/who?">Wakaba</a> <code class="mail">&lt;<a href="mailto:w@suika.fam.cx" rel="author">w@suika.fam.cx</a>&gt;</code>.</p>
+
+<p>This library is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.</p>
+
+</div>
+
+<footer>
+[<a href="readme.en" hreflang="en" lang="en" rel="alternate">English</a>]
+[<a href="readme.ja" hreflang="ja" lang="ja" rel="alternate">日本語</a>]
+</footer>
+</body></html>

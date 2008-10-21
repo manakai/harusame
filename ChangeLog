@@ -1,5 +1,11 @@
 2008-10-21  Wakaba  <wakaba@suika.fam.cx>
 
+	* readme.html.src: New file.
+
+	* Makefile: New file.
+
+2008-10-21  Wakaba  <wakaba@suika.fam.cx>
+
 	* cvscommit.sh, mkcommitfeed.pl: New files (copied from
 	manakai-core).
 

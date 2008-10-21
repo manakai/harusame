@@ -13,4 +13,19 @@
 
 2008-10-21  Wakaba  &lt;wakaba@suika.fam.cx&gt;
 
+</content></entry><entry xml:id="entry-1224584070"><id>http://suika.fam.cx/www/harusame/harusame-commit#entry-1224584070</id><title>2008-10-21 Wakaba</title><updated>2008-10-21T10:14:27Z</updated><author><name>Wakaba</name><email>wakaba@suika.fam.cx</email></author><content type="text">++ harusame/bin/ChangeLog	21 Oct 2008 09:03:25 -0000
+	* harusame.pl: Documentation added.  Use |require| instead of
+	|use| so that |--help| option doesn't require manakai module.
+
+	* Makefile: Rule to make |harusame.html| is added.
+
+2008-10-21  Wakaba  &lt;wakaba@suika.fam.cx&gt;
+
+++ ChangeLog	21 Oct 2008 10:14:06 -0000
+	* readme.html.src: New file.
+
+	* Makefile: New file.
+
+2008-10-21  Wakaba  &lt;wakaba@suika.fam.cx&gt;
+
 </content></entry></feed>

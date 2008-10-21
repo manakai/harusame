@@ -1,5 +1,14 @@
 2008-10-21  Wakaba  <wakaba@suika.fam.cx>
 
+	* cvscommit.sh, mkcommitfeed.pl: New files (copied from
+	manakai-core).
+
+2008-10-21  Wakaba  <wakaba@suika.fam.cx>
+
+	* bin/: New directory.
+
+2008-10-21  Wakaba  <wakaba@suika.fam.cx>
+
 	* ChangeLog: New file.
 	
 

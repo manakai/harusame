@@ -28,4 +28,11 @@
 
 2008-10-21  Wakaba  &lt;wakaba@suika.fam.cx&gt;
 
+</content></entry><entry xml:id="entry-1224584232"><id>http://suika.fam.cx/www/harusame/harusame-commit#entry-1224584232</id><title>2008-10-21 Wakaba</title><updated>2008-10-21T10:17:08Z</updated><author><name>Wakaba</name><email>wakaba@suika.fam.cx</email></author><content type="text">++ ChangeLog	21 Oct 2008 10:17:00 -0000
+	* ,htaccess: Configured for the Atom feed.
+
+	* readme.html.src: Link to feed added.
+
+2008-10-21  Wakaba  &lt;wakaba@suika.fam.cx&gt;
+
 </content></entry></feed>

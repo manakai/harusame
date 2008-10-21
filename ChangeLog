@@ -1,5 +1,9 @@
 2008-10-21  Wakaba  <wakaba@suika.fam.cx>
 
+	* .htaccess: Set .src as text/plain.
+
+2008-10-21  Wakaba  <wakaba@suika.fam.cx>
+
 	* ,htaccess: Configured for the Atom feed.
 
 	* readme.html.src: Link to feed added.

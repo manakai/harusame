@@ -1,5 +1,6 @@
-AddCharset utf-8 .html .u8
+AddCharset UTF-8 .html .u8
 AddType application/atom+xml .atom
+AddType text/plain .src
 
 ## License: Public Domain.
-## $Date: 2008/10/21 10:17:07 $
+## $Date: 2008/10/21 10:18:50 $

@@ -134,29 +134,34 @@ HTML element in the document.
 <i>selected</i> in the similar way to the
 <code>data-lang-container</code> attribute.  Then, the content of the
 element with the <code>data-lang-content</code> attribute is replaced
-by the text content (the value of the <code>textContent</code> DOM
+by the text content (the value of the <code>textContent</code> IDL
 attribute) of the <i>selected</i> element.
 
 </p><p>If the element addressed by the ID has
 <code>data-lang-declaration</code> attribute, then the element will be
 removed from the document at the end of the whole processing.
 
-</p><p>This attribute is useful when an HTML element does not allow to
-insert elements as its content.  For example, the content model of the
-<code>title</code> element does not allow child elements, so that this
-attribute can be used to provide translations to the
-<code>title</code> element content like this:
+</p><p>This attribute is useful when an HTML element does not allow
+elements to be inserted within it .  For example, the content model of
+the <code>title</code> element does not allow child elements.  In such
+a case, instead of inserting elements with <code>lang</code>
+attribute, this attribute can be used to point to translations of the
+<code>title</code> element content, as follows:
 
 </p><pre class="example" lang="mul">
 <code>&lt;title <mark>data-lang-content="title-content"</mark>&gt;Example&lt;/title&gt;
 
-&lt;div <mark>id="title-content" data-lang-declaration</mark>&gt;
+&lt;div <mark>id="title-content"</mark> data-lang-declaration hidden&gt;
 &lt;span lang=en&gt;Example&lt;/span&gt;
 &lt;span lang=ja&gt;例&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
 
-</dt><dt lang="en"><dfn id="attr-data-lang-declaration"><code>data-lang-declaration</code></dfn>
+<p>Note that the pointed element, i.e. the <code>div</code> element,
+has the <a href="#attr-data-lang-declaration"><code>data-lang-declaration</code></a>
+attribute specified.
+
+</p></dt><dt lang="en"><dfn id="attr-data-lang-declaration"><code>data-lang-declaration</code></dfn>
 
 </dt><dd>
 
@@ -165,6 +170,10 @@ alternatives in various languages.
 
 </p><p>This attribute must not be used for an element that is not pointed
 by a <code>data-lang-content</code> attribute in the same document.
+In many (though not all) cases, the pointed translations do not form
+the actual content of the document and therefore the attribute ask to
+<i lang="ja">harusame</i> to get rid of them from the document at the
+end of the processing.
 
 </p></dd></dl>
 
@@ -177,24 +186,31 @@ by a <code>data-lang-content</code> attribute in the same document.
 document to learn it can be used</a>.</span></p></div>
 
 <div class="section" id="dependency">
-<h2>Dependency</h2>
+<h2 data-lang-container=""><span lang="en">Dependency</span></h2>
 
-<p>This software requires Perl 5.8 or later, as well as <a href="http://suika.fam.cx/www/manakai-core/doc/web/">manakai-core</a>
+<p data-lang-container=""><span lang="en">This software requires Perl 5.8 or later.</span></p><p data-lang-container=""><span lang="en">It also depends on <a href="http://suika.fam.cx/www/manakai-core/doc/web/">manakai-core</a>
 and <a href="http://suika.fam.cx/www/markup/html/whatpm/readme">Whatpm</a>
-packages.
-
-</p></div>
+packages, which are included as part of the standard <i lang="ja">harusame</i> distribution.</span></p></div>
 
 <div class="section" id="download">
 <h2>Download</h2>
 
-<p>This software is available from <a href="http://suika.fam.cx/gate/cvs/webroot/www/harusame/">the CVS
+<p data-lang-container=""><span lang="en"><i lang="ja">Harusame</i> is developed using git.  <a href="http://suika.fam.cx/gate/git/wi/harusame.git/">The git
+repository</a> can be cloned by:</span></p><pre>
+$ <kbd>git clone http://suika.fam.cx/gate/git/bare/harusame.git/</kbd>
+</pre>
+
+<!--
+<p>This software is available from <a
+href="http://suika.fam.cx/gate/cvs/webroot/www/harusame/">the CVS
 repository</a>.
 
-</p><p><a href="http://suika.fam.cx/gate/cvs/webroot/www/harusame/harusame.tar.gz?tarball=1">The
+<p><a
+href="http://suika.fam.cx/gate/cvs/webroot/www/harusame/harusame.tar.gz?tarball=1">The
 tarball for the latest version</a> is also available.
+-->
 
-</p><p>There is no installer.  Just copy the script file to some
+<p>There is no installer.  Just copy the script file to some
 directory.
 
 </p></div>
@@ -206,9 +222,9 @@ directory.
 </div>
 
 <div class="section" id="license">
-<h2>License</h2>
+<h2 data-lang-container=""><span lang="en">License</span></h2>
 
-<p>Copyright 2008 <a href="http://suika.fam.cx/~wakaba/who?">Wakaba</a> <code class="mail">&lt;<a href="mailto:w@suika.fam.cx" rel="author">w@suika.fam.cx</a>&gt;</code>.</p>
+<p>Copyright 2008, 2010 <a href="http://suika.fam.cx/~wakaba/who?">Wakaba</a> <code class="mail">&lt;<a href="mailto:w@suika.fam.cx" rel="author">w@suika.fam.cx</a>&gt;</code>.</p>
 
 <p>This library is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.</p>

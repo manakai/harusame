@@ -168,27 +168,33 @@ HTML element in the document.
 <i>selected</i> in the similar way to the
 <code>data-lang-container</code> attribute.  Then, the content of the
 element with the <code>data-lang-content</code> attribute is replaced
-by the text content (the value of the <code>textContent</code> DOM
+by the text content (the value of the <code>textContent</code> IDL
 attribute) of the <i>selected</i> element.
 
 <p>If the element addressed by the ID has
 <code>data-lang-declaration</code> attribute, then the element will be
 removed from the document at the end of the whole processing.
 
-<p>This attribute is useful when an HTML element does not allow to
-insert elements as its content.  For example, the content model of the
-<code>title</code> element does not allow child elements, so that this
-attribute can be used to provide translations to the
-<code>title</code> element content like this:
+<p>This attribute is useful when an HTML element does not allow
+elements to be inserted within it .  For example, the content model of
+the <code>title</code> element does not allow child elements.  In such
+a case, instead of inserting elements with <code>lang</code>
+attribute, this attribute can be used to point to translations of the
+<code>title</code> element content, as follows:
 
 <pre class=example lang=mul>
 <code>&lt;title <mark>data-lang-content="title-content"</mark>>Example&lt;/title>
 
-&lt;div <mark>id="title-content" data-lang-declaration</mark>>
+&lt;div <mark>id="title-content"</mark> data-lang-declaration hidden>
 &lt;span lang=en>Example&lt;/span>
 &lt;span lang=ja>例&lt;/span>
 &lt;/div>
 </code></pre>
+
+<p>Note that the pointed element, i.e. the <code>div</code> element,
+has the <a
+href="#attr-data-lang-declaration"><code>data-lang-declaration</code></a>
+attribute specified.
 
 <dt lang=en><dfn
 id=attr-data-lang-declaration><code>data-lang-declaration</code></dfn>
@@ -200,6 +206,10 @@ alternatives in various languages.
 
 <p>This attribute must not be used for an element that is not pointed
 by a <code>data-lang-content</code> attribute in the same document.
+In many (though not all) cases, the pointed translations do not form
+the actual content of the document and therefore the attribute ask to
+<i lang=ja>harusame</i> to get rid of them from the document at the
+end of the processing.
 
 </dl>
 
@@ -218,25 +228,57 @@ lang=ja>harusame</i>.  <a href="readme.html.src">See the source
 document to learn it can be used</a>.</span>
 
 <span lang=ja>この文書自体も春雨を使って生成しています。<a
-href="readme.html.src">春雨の使い方の例として、原始文書をご覧ください
-</a>。</span>
+href="readme.html.src">春雨の使い方の例として、
+原始文書をご覧ください</a>。</span>
 
 </div>
 
 <div class=section id=dependency>
-<h2>Dependency</h2>
+<h2 data-lang-container>
+<span lang=en>Dependency</span>
+<span lang=ja>依存性</span>
+</h2>
 
-<p>This software requires Perl 5.8 or later, as well as <a
+<p data-lang-container>
+<span lang=en>This software requires Perl 5.8 or later.</span>
+<span lang=ja>春雨の動作には Perl 5.8 以降が必要です。</span>
+
+<p data-lang-container>
+
+<span lang=en>It also depends on <a
 href="http://suika.fam.cx/www/manakai-core/doc/web/">manakai-core</a>
 and <a
 href="http://suika.fam.cx/www/markup/html/whatpm/readme">Whatpm</a>
-packages.
+packages, which are included as part of the standard <i
+lang=ja>harusame</i> distribution.</span>
+
+<span lang=ja>春雨は<a
+href="http://suika.fam.cx/www/manakai-core/doc/web/">manakai-core</a> 
+と <a
+href="http://suika.fam.cx/www/markup/html/whatpm/readme">Whatpm</a> 
+も使っていますが、
+通常の春雨のパッケージに含まれているので別途用意する必要はありません。</span>
 
 </div>
 
 <div class=section id=download>
 <h2>Download</h2>
 
+<p data-lang-container>
+
+<span lang=en><i lang=ja>Harusame</i> is developed using git.  <a
+href="http://suika.fam.cx/gate/git/wi/harusame.git/">The git
+repository</a> can be cloned by:</span>
+
+<span lang=ja>春雨は git を使って開発しています。<a
+href="http://suika.fam.cx/gate/git/wi/harusame.git/">git 
+リポジトリ</a>は次のようにして clone できます。</span>
+
+<pre>
+$ <kbd>git clone http://suika.fam.cx/gate/git/bare/harusame.git/</kbd>
+</pre>
+
+<!--
 <p>This software is available from <a
 href="http://suika.fam.cx/gate/cvs/webroot/www/harusame/">the CVS
 repository</a>.
@@ -244,6 +286,7 @@ repository</a>.
 <p><a
 href="http://suika.fam.cx/gate/cvs/webroot/www/harusame/harusame.tar.gz?tarball=1">The
 tarball for the latest version</a> is also available.
+-->
 
 <p>There is no installer.  Just copy the script file to some
 directory.
@@ -260,9 +303,12 @@ directory.
 </div>
 
 <div class="section" id="license">
-<h2>License</h2>
+<h2 data-lang-container>
+<span lang=en>License</span>
+<span lang=ja>ライセンス</span>
+</h2>
 
-<p>Copyright 2008 <a
+<p>Copyright 2008, 2010 <a
 href="http://suika.fam.cx/~wakaba/who?">Wakaba</a> <code
 class="mail">&lt;<a href="mailto:w@suika.fam.cx"
 rel="author">w@suika.fam.cx</a>></code>.</p>

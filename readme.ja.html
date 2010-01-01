@@ -9,32 +9,15 @@
 <div class="section" id="introduction">
 <h2 data-lang-container=""><span lang="ja">これは何?</span></h2>
 
-<p>
-
-<span lang="en"><b><i lang="ja">Harusame</i></b> extracts a version of the
-HTML document written in the specified natural language, from a source
-HTML document that contains paragraphs in multiple natural
-languages.</span>
-
-</p><p>
-
-<span lang="en">The document management of a multilingual Web site where
-there are multiple versions of a (conceptually same) document is
-somewhat difficult in general. If the author of an HTML document wants
-to edit a part of the document, then he or she has to ensure not to
-forget updating translations at the same time, otherwise documents in
-different language versions also differ in their content versions.</span>
-
-</p><p>
-
-<span lang="en">Using <b><i lang="ja">harusame</i></b>, one can generate
-versions of an HTML document in different language from one source
-HTML document that contains paragraphs written in all of those
-languages, such that authors no longer have to manage different
-content versions and different language versions in separate
-files.</span>
-
-</p></div>
+<p data-lang-container=""><span lang="ja"><b>春雨</b>は、複数の自然言語の文章をまとめた元となる 
+HTML 文書から、指定した自然言語の版の HTML 文書を取り出すツールです。</span></p><p data-lang-container=""><span lang="ja">多言語 Web サイトで (実際には同じ内容の) 
+文書の版を管理するのは大変です。 HTML 文書の著者が一部でも変更しようと思うと、
+他の言語の翻訳も同時に更新しておかないと、言語間で文書の版が違ってしまいます。
+</span></p><p data-lang-container=""><span lang="ja"><b>春雨</b>を使えば複数言語の HTML 文書を1つの元となる
+HTML 文書から生成できます。
+段落毎に各言語の翻訳文を並べた元文書を用意すればよいので、
+著者は別々のファイルで別々の言語の別々の版を管理する煩わしさから開放されます。
+</span></p></div>
 
 <div class="section" id="news">
 <h2 data-lang-container=""><span lang="ja">最新情報</span></h2>
@@ -157,7 +140,10 @@ attribute, this attribute can be used to point to translations of the
 
 <p>Note that the pointed element, i.e. the <code>div</code> element,
 has the <a href="#attr-data-lang-declaration"><code>data-lang-declaration</code></a>
-attribute specified.
+attribute specified.  In many (though not all) cases, the pointed
+translations do not form the actual content of the document and
+therefore the attribute ask to <i lang="ja">harusame</i> to get rid of
+them from the document at the end of the processing.
 
 </p></dt><dt lang="en"><dfn id="attr-data-lang-declaration"><code>data-lang-declaration</code></dfn>
 
@@ -168,10 +154,6 @@ alternatives in various languages.
 
 </p><p>This attribute must not be used for an element that is not pointed
 by a <code>data-lang-content</code> attribute in the same document.
-In many (though not all) cases, the pointed translations do not form
-the actual content of the document and therefore the attribute ask to
-<i lang="ja">harusame</i> to get rid of them from the document at the
-end of the processing.
 
 </p></dd></dl>
 
@@ -180,8 +162,8 @@ end of the processing.
 <div class="section" id="examples">
 <h2 data-lang-container=""><span lang="ja">利用例</span></h2>
 
-<p data-lang-container=""><span lang="ja">この文書自体も春雨を使って生成しています。<a href="readme.html.src">春雨の使い方の例として、原始文書をご覧ください
-</a>。</span></p></div>
+<p data-lang-container=""><span lang="ja">この文書自体も春雨を使って生成しています。<a href="readme.html.src">春雨の使い方の例として、
+原始文書をご覧ください</a>。</span></p></div>
 
 <div class="section" id="dependency">
 <h2 data-lang-container=""><span lang="ja">依存性</span></h2>

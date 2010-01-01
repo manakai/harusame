@@ -2,3 +2,5 @@
 .*~
 *.BAK
 .*.BAK
+pod2htmi.tmp
+pod2htmd.tmp

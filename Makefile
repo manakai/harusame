@@ -3,7 +3,7 @@ HARUSAME_BIN_DIR = $(HARUSAME_DIR)bin/
 HARUSAME = $(HARUSAME_BIN_DIR)harusame.pl
 
 PERL_ = perl
-PERL_INC_OPTIONS = -I ../manakai-core/lib -I ../markup/html/whatpm/
+PERL_INC_OPTIONS = 
 PERL = $(PERL_) $(PERL_INC_OPTIONS)
 
 all: readme.en.html readme.ja.html

@@ -1,5 +1,8 @@
 #!/usr/bin/perl
 use strict;
+use warnings;
+use Path::Class;
+use lib glob file (__FILE__)->dir->parent->subdir ('modules')->subdir ('*')->subdir ('lib');
 
 use Getopt::Long;
 use Pod::Usage;

@@ -21,6 +21,25 @@ pod2usage (-exitval => 1, -verbose => 1,
       unless defined $lang;
 $lang =~ tr/A-Z/a-z/; ## ASCII case-insensitive.
 
+sub get_content_element ($) {
+  my $container = shift;
+  
+  my $c_el;
+  for my $e (@{$container->child_nodes}) {
+    next unless $e->node_type == $e->ELEMENT_NODE;
+    my $e_lang = $e->manakai_html_language;
+    $e_lang =~ tr/A-Z/a-z/; ## ASCII case-insensitive.
+    if ($e_lang eq $lang) {
+      $c_el = $e;
+      last;
+    } else {
+      $c_el ||= $e;
+    }
+  }
+  
+  return $c_el;
+} # get_content_element
+
 require Message::DOM::DOMImplementation;
 my $dom = Message::DOM::DOMImplementation->new;
 
@@ -76,25 +95,6 @@ $doc->document_element->manakai_html_language ($lang);
 
 binmode STDOUT, ':encoding(utf8)';
 print STDOUT $doc->inner_html;
-
-sub get_content_element ($) {
-  my $container = shift;
-  
-  my $c_el;
-  for my $e (@{$container->child_nodes}) {
-    next unless $e->node_type == $e->ELEMENT_NODE;
-    my $e_lang = $e->manakai_html_language;
-    $e_lang =~ tr/A-Z/a-z/; ## ASCII case-insensitive.
-    if ($e_lang eq $lang) {
-      $c_el = $e;
-      last;
-    } else {
-      $c_el ||= $e;
-    }
-  }
-  
-  return $c_el;
-} # get_content_element
 
 __END__
 

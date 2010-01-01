@@ -2,5 +2,9 @@ AddCharset UTF-8 .html .u8
 AddType application/atom+xml .atom
 AddType text/plain .src
 
+Redirect 301 /www/harusame/harusame-commit.en.atom.u8 http://suika.fam.cx/gate/git/wi/harusame.git/atom
+Redirect 301 /www/harusame/harusame-commit.en.atom http://suika.fam.cx/gate/git/wi/harusame.git/atom
+Redirect 301 /www/harusame/harusame-commit.en http://suika.fam.cx/gate/git/wi/harusame.git/atom
+Redirect 301 /www/harusame/harusame-commit http://suika.fam.cx/gate/git/wi/harusame.git/atom
+
 ## License: Public Domain.
-## $Date: 2008/10/21 10:18:50 $

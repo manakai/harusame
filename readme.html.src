@@ -326,7 +326,7 @@ can build a noarch and source RPM packages by:</span>
 <span lang=ja>春雨の RPM パッケージ用の spec ファイルがディレクトリー 
 <code>config/rpm/</code> に入っていますから、</span>
 
-<pre>
+<pre lang=en>
 $ <kbd>cd config/rpm</kbd>
 $ <kbd>make build</kbd>
 </pre>
@@ -338,7 +338,7 @@ $ <kbd>make build</kbd>
 <span lang=ja>... のようにして noarch RPM パッケージとソース RPM 
 パッケージを作ることができます。その上で、</span>
 
-<pre>
+<pre lang=en>
 $ <kbd>rpm -ivh ~/rpm/RPMS/noarch/harusame-<var>version</var>.noarch.rpm</kbd>
 </pre>
 
@@ -348,7 +348,7 @@ $ <kbd>rpm -ivh ~/rpm/RPMS/noarch/harusame-<var>version</var>.noarch.rpm</kbd>
 <code>Makefile.PL</code> directry to install the tarball
 package.</span>
 
-<span lang=ja>... のようにして生成されたパッケージを
+<span lang=ja>... という感じで、生成されたパッケージを
 インストールしてください。Perl に詳しい方であれば、
 tar 玉から直接 <code>Makefile.PL</code> 
 を使ってインストールすることもできます。</span>

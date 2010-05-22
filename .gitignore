@@ -1,6 +1,11 @@
 *~
 .*~
 *.BAK
+*.bak
 .*.BAK
+*.old
 pod2htmi.tmp
 pod2htmd.tmp
+blib
+*.gz
+pm_to_blib

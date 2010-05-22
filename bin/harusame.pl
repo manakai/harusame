@@ -100,7 +100,7 @@ __END__
 
 =head1 NAME
 
-harusame.pl - Multilingual Web page management tool
+harusame - Multilingual Web page management tool
 
 =head1 SYNOPSIS
 

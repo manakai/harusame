@@ -21,3 +21,5 @@ copy: $(HARUSAME_TARBALL) harusame.spec harusame-filter-requires.sh
 
 build: copy
 	cd $(RPM_DIR) && rpmbuild -ba SPECS/harusame.spec
+
+## License: Public Domain.

@@ -104,15 +104,15 @@ harusame - Multilingual Web page management tool
 
 =head1 SYNOPSIS
 
-  perl harusame.pl --lang LANGCODE < input.html > output.html
+  $ harusame --lang LANGCODE < input.html > output.html
 
-  perl harusame.pl --help
+  $ harusame --help
 
 =head1 DESCRIPTION
 
-The C<harusame.pl> script extracts a version of the HTML document
-written in the specified natural language, from a source HTML document
-that contains paragraphs in multiple natural languages.
+The C<harusame> script extracts a version of the HTML document written
+in the specified natural language, from a source HTML document that
+contains paragraphs in multiple natural languages.
 
 The document management of a multilingual Web site where there are
 multiple versions of a (conceptually same) document is somewhat
@@ -121,11 +121,11 @@ a part of the document, then he or she has to ensure not to forget
 updating translations at the same time, otherwise documents in
 different language versions also differ in their content versions.
 
-Using the C<harusame.pl>, one can generate versions of an HTML
-document in different language from one source HTML document that
-contains paragraphs written in all of those languages, such that
-authors no longer have to manage different content versions and
-different language versions in separate files.
+Using the C<harusame>, one can generate versions of an HTML document
+in different language from one source HTML document that contains
+paragraphs written in all of those languages, such that authors no
+longer have to manage different content versions and different
+language versions in separate files.
 
 =head1 ARGUMENTS
 

@@ -77,6 +77,14 @@ type="application/atom+xml">変更履歴差分の Atom
 
 <ul>
 
+<li><time>2010-05-22</time>:
+  <span data-lang-container=replace>
+    <span lang=en><a href="config/rpm/">An RPM spec file</a> is now
+    available.</span>
+    <span lang=ja><a href="config/rpm/">RPM の spec
+    ファイル</a>を用意しました。</span>
+  </span>
+
 <li><time>2008-10-21</time>: 
   <span data-lang-container=replace>
     <span lang=en>The first version is released!</span>

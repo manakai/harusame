@@ -3,16 +3,20 @@
 %define NVR %{pkgname}-%{version}-%{release}
 %define maketest 1
 
-Name: harusame
-summary:   harusame - Multilingual Web page management tool
-version:   20100522
-release:   1.suika
-vendor:    Wakaba <w@suika.fam.cx>
-license:   Perl
-group:     Applications/Text
-buildroot: %{_tmppath}/%{name}-%{version}-%(id -u -n)
-buildarch: noarch
-prefix:    %(echo %{_prefix})
+Name:      harusame
+Summary:   harusame - Multilingual Web page management tool
+Version:   20100522
+Release:   2.suika
+
+Packager:  Wakaba <w@suika.fam.cx>
+Vendor:    Suika yum repository <http://suika.fam.cx/gate/yum/>
+
+License:   Perl
+Group:     Applications/Text
+
+BuildRoot: %{_tmppath}/%{name}-%{version}-%(id -u -n)
+BuildArch: noarch
+Prefix:    %(echo %{_prefix})
 
 Source0:   harusame-20100522.tar.gz
 Source11:  harusame-filter-requires.sh
@@ -34,7 +38,7 @@ Source11:  harusame-filter-requires.sh
 %define __perl_provides %{SOURCE11} %{prev__perl_provides}
 
 %description
-The `harusame.pl' script extracts a version of the HTML document
+The `harusame' script extracts a version of the HTML document
 written in the specified natural language, from a source HTML document
 that contains paragraphs in multiple natural languages.
 
@@ -45,7 +49,7 @@ a part of the document, then he or she has to ensure not to forget
 updating translations at the same time, otherwise documents in
 different language versions also differ in their content versions.
 
-Using the `harusame.pl', one can generate versions of an HTML
+Using the `harusame', one can generate versions of an HTML
 document in different language from one source HTML document that
 contains paragraphs written in all of those languages, such that
 authors no longer have to manage different content versions and
@@ -156,5 +160,8 @@ find %{buildroot}%{_prefix}             \
 %defattr(-,root,root)
 
 %changelog
+* Sat May 22 2010 Wakaba <w@suika.fam.cx> - 20100522.2-suika
+- Rebuilt.
+
 * Sat May 22 2010 Wakaba <w@suika.fam.cx> - 20100522.1-suika
 - Initial build.

@@ -132,14 +132,14 @@ in various languages.</span>
 
 <li>
 
-<p>Then, invoke the <code>harusame.pl</code> for each language to
+<p>Then, invoke the <code>harusame</code> command for each language to
 generate, as:
 
 <pre lang=en>
-$ <kbd>perl harusame.pl --lang en &lt; <var>html-document.src</var> > <var>html-document.en</var></kbd>
-$ <kbd>perl harusame.pl --lang ja &lt; <var>html-document.src</var> > <var>html-document.ja</var></kbd></pre>
+$ <kbd>harusame --lang en &lt; <var>html-document.src</var> > <var>html-document.en</var></kbd>
+$ <kbd>harusame --lang ja &lt; <var>html-document.src</var> > <var>html-document.ja</var></kbd></pre>
 
-<p>For more information on the <code>harusame.pl</code> command-line
+<p>For more information on the <code>harusame</code>'s command-line
 options, see <a href="bin/harusame.html">its documentation</a>.
 
 </ol>
@@ -309,8 +309,57 @@ href="http://suika.fam.cx/gate/cvs/webroot/www/harusame/harusame.tar.gz?tarball=
 tarball for the latest version</a> is also available.
 -->
 
-<p>There is no installer.  Just copy the script file to some
-directory.
+</div>
+
+<div class=section id=setup>
+<h2 data-lang-container>
+  <span lang=en>Setup</span>
+  <span lang=ja>セットアップ</span>
+</h2>
+
+<p data-lang-container>
+
+<span lang=en>The spec file for the <i lang=ja>harusame</i> RPM
+package is available in the directory <code>config/rpm/</code>.  You
+can build a noarch and source RPM packages by:</span>
+
+<span lang=ja>春雨の RPM パッケージ用の spec ファイルがディレクトリー 
+<code>config/rpm/</code> に入っていますから、</span>
+
+<pre>
+$ <kbd>cd config/rpm</kbd>
+$ <kbd>make build</kbd>
+</pre>
+
+<p data-lang-container>
+
+<span lang=en>... and then install the generated package by:</span>
+
+<span lang=ja>... のようにして noarch RPM パッケージとソース RPM 
+パッケージを作ることができます。その上で、</span>
+
+<pre>
+$ <kbd>rpm -ivh ~/rpm/RPMS/noarch/harusame-<var>version</var>.noarch.rpm</kbd>
+</pre>
+
+<p data-lang-container>
+
+<span lang=en>If your are familiar with Perl, you can use
+<code>Makefile.PL</code> directry to install the tarball
+package.</span>
+
+<span lang=ja>... のようにして生成されたパッケージを
+インストールしてください。Perl に詳しい方であれば、
+tar 玉から直接 <code>Makefile.PL</code> 
+を使ってインストールすることもできます。</span>
+
+<p data-lang-container>
+
+<span lang=en>Alternatively, just copying the files to your favorite
+directory does work, too.</span>
+
+<span lang=ja>あるいは、単にファイルを好きなディレクトリーに
+複製するだけでも十分です。</span>
 
 </div>
 

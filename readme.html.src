@@ -287,16 +287,21 @@ href="http://suika.fam.cx/www/markup/html/whatpm/readme">Whatpm</a>
 
 <p data-lang-container>
 
-<span lang=en><i lang=ja>Harusame</i> is developed using git.  <a
-href="http://suika.fam.cx/gate/git/wi/harusame.git/">The git
-repository</a> can be cloned by:</span>
+<span lang=en><i lang=ja>Harusame</i> is developed using Git.  Git
+repository (<a
+href="http://suika.fam.cx/gate/git/wi/harusame.git/">Suika</a> / <a
+href="https://github.com/wakaba/harusame">GitHub</a>) can be cloned by
+the following commands:</span>
 
-<span lang=ja>春雨は git を使って開発しています。<a
-href="http://suika.fam.cx/gate/git/wi/harusame.git/">git 
-リポジトリ</a>は次のようにして clone できます。</span>
+<span lang=ja>春雨は Git を使って開発しています。 Git リポジトリ(<a
+href="http://suika.fam.cx/gate/git/wi/harusame.git/">Suika</a> / <a
+href="https://github.com/wakaba/harusame">GitHub</a>) は次のようにして 
+clone できます。</span>
 
 <pre>
-$ <kbd>git clone http://suika.fam.cx/gate/git/bare/harusame.git/</kbd>
+$ <kbd>git clone git://github.com/wakaba/harusame.git</kbd><!--
+$ <kbd>git clone http://suika.fam.cx/gate/git/bare/harusame.git/</kbd>-->
+$ <kbd>git submodule update --init</kbd>
 </pre>
 
 <!--
@@ -378,7 +383,7 @@ directory does work, too.</span>
 <span lang=ja>ライセンス</span>
 </h2>
 
-<p>Copyright 2008, 2010 <a
+<p>Copyright 2008-2011 <a
 href="http://suika.fam.cx/~wakaba/who?">Wakaba</a> <code
 class="mail">&lt;<a href="mailto:w@suika.fam.cx"
 rel="author">w@suika.fam.cx</a>></code>.</p>

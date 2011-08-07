@@ -180,9 +180,11 @@ by a <code>data-lang-content</code> attribute in the same document.
 <div class="section" id="download">
 <h2>Download</h2>
 
-<p data-lang-container=""><span lang="ja">春雨は git を使って開発しています。<a href="http://suika.fam.cx/gate/git/wi/harusame.git/">git 
-リポジトリ</a>は次のようにして clone できます。</span></p><pre>
-$ <kbd>git clone http://suika.fam.cx/gate/git/bare/harusame.git/</kbd>
+<p data-lang-container=""><span lang="ja">春雨は Git を使って開発しています。 Git リポジトリ(<a href="http://suika.fam.cx/gate/git/wi/harusame.git/">Suika</a> / <a href="https://github.com/wakaba/harusame">GitHub</a>) は次のようにして 
+clone できます。</span></p><pre>
+$ <kbd>git clone git://github.com/wakaba/harusame.git</kbd><!--
+$ <kbd>git clone http://suika.fam.cx/gate/git/bare/harusame.git/</kbd>-->
+$ <kbd>git submodule update --init</kbd>
 </pre>
 
 <!--
@@ -226,7 +228,7 @@ tar 玉から直接 <code>Makefile.PL</code>
 <div class="section" id="license">
 <h2 data-lang-container=""><span lang="ja">ライセンス</span></h2>
 
-<p>Copyright 2008, 2010 <a href="http://suika.fam.cx/~wakaba/who?">Wakaba</a> <code class="mail">&lt;<a href="mailto:w@suika.fam.cx" rel="author">w@suika.fam.cx</a>&gt;</code>.</p>
+<p>Copyright 2008-2011 <a href="http://suika.fam.cx/~wakaba/who?">Wakaba</a> <code class="mail">&lt;<a href="mailto:w@suika.fam.cx" rel="author">w@suika.fam.cx</a>&gt;</code>.</p>
 
 <p>This library is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.</p>

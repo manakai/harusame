@@ -1,8 +1,7 @@
 <!DOCTYPE html><html lang="ja"><head><title data-lang-content="title" lang="ja">春雨 — 多言語 Web 頁管理ツール</title>
 <link href="#author" rel="author">
 <link href="#license" rel="license">
-<link href="harusame-commit" rel="feed" type="application/atom+xml">
-<link href="http://suika.fam.cx/www/style/html/xhtml" rel="stylesheet">
+<link href="http://suika.suikawiki.org/www/style/html/xhtml" rel="stylesheet">
 
 </head><body><h1 data-lang-container="" id="title"><span lang="ja">春雨 — 多言語 Web 頁管理ツール</span></h1>
 
@@ -172,19 +171,21 @@ by a <code>data-lang-content</code> attribute in the same document.
 <div class="section" id="dependency">
 <h2 data-lang-container=""><span lang="ja">依存性</span></h2>
 
-<p data-lang-container=""><span lang="ja">春雨の動作には Perl 5.8 以降が必要です。</span></p><p data-lang-container=""><span lang="ja">春雨は<a href="http://suika.fam.cx/www/manakai-core/doc/web/">manakai-core</a> 
-と <a href="http://suika.fam.cx/www/markup/html/whatpm/readme">Whatpm</a> 
-も使っていますが、
-通常の春雨のパッケージに含まれているので別途用意する必要はありません。</span></p></div>
+<p data-lang-container=""><span lang="ja">春雨の動作には Perl 5.8 以降が必要です。</span></p><p data-lang-container=""><span lang="ja">春雨は<a href="http://suika.suikawiki.org/www/manakai-core/doc/web/">manakai-core</a> 
+と <a href="http://suika.suikawiki.org/www/charclass/readme">CharClass</a>
+も使っています (Git リポジトリーのサブモジュールです)。</span></p></div>
 
 <div class="section" id="download">
 <h2>Download</h2>
 
-<p data-lang-container=""><span lang="ja">春雨は Git を使って開発しています。 Git リポジトリ(<a href="http://suika.fam.cx/gate/git/wi/harusame.git/">Suika</a> / <a href="https://github.com/wakaba/harusame">GitHub</a>) は次のようにして 
-clone できます。</span></p><pre>
+<p data-lang-container=""><span lang="ja">春雨は Git を使って開発しています。 Git リポジトリ(<!--<a
+href="http://suika.fam.cx/gate/git/wi/harusame.git/">Suika</a> / --><a href="https://github.com/wakaba/harusame">GitHub</a>) は次のようにして 
+clone できます。</span></p><pre id="setup">
 $ <kbd>git clone git://github.com/wakaba/harusame.git</kbd><!--
 $ <kbd>git clone http://suika.fam.cx/gate/git/bare/harusame.git/</kbd>-->
-$ <kbd>git submodule update --init</kbd>
+$ <kbd>cd harusame</kbd>
+$ <kbd>make deps</kbd>
+$ <kbd>./harusame</kbd>
 </pre>
 
 <!--
@@ -199,36 +200,18 @@ tarball for the latest version</a> is also available.
 
 </div>
 
-<div class="section" id="setup">
-<h2 data-lang-container=""><span lang="ja">セットアップ</span></h2>
-
-<p data-lang-container=""><span lang="ja">春雨の RPM パッケージ用の spec ファイルがディレクトリー 
-<code>config/rpm/</code> に入っていますから、</span></p><pre lang="en">
-$ <kbd>cd config/rpm</kbd>
-$ <kbd>make build</kbd>
-</pre>
-
-<p data-lang-container=""><span lang="ja">... のようにして noarch RPM パッケージとソース RPM 
-パッケージを作ることができます。その上で、</span></p><pre lang="en">
-$ <kbd>rpm -ivh ~/rpm/RPMS/noarch/harusame-<var>version</var>.noarch.rpm</kbd>
-</pre>
-
-<p data-lang-container=""><span lang="ja">... という感じで、生成されたパッケージを
-インストールしてください。Perl に詳しい方であれば、
-tar 玉から直接 <code>Makefile.PL</code> 
-を使ってインストールすることもできます。</span></p><p data-lang-container=""><span lang="ja">あるいは、単にファイルを好きなディレクトリーに
-複製するだけでも十分です。</span></p></div>
-
 <div class="section" id="author">
 <h2 data-lang-container=""><span lang="ja">著者</span></h2>
 
-<p><a href="http://suika.fam.cx/~wakaba/who?" rel="author">Wakaba</a>.</p>
+<p><a href="http://suika.suikawiki.org/~wakaba/who?" rel="author">Wakaba</a>.</p>
 </div>
 
 <div class="section" id="license">
 <h2 data-lang-container=""><span lang="ja">ライセンス</span></h2>
 
-<p>Copyright 2008-2011 <a href="http://suika.fam.cx/~wakaba/who?">Wakaba</a> <code class="mail">&lt;<a href="mailto:w@suika.fam.cx" rel="author">w@suika.fam.cx</a>&gt;</code>.</p>
+<p>Copyright
+2008-2015 <a href="http://suika.suikawiki.org/~wakaba/who?">Wakaba</a> 
+<code class="mail">&lt;<a href="mailto:wakaba@suikawiki.org" rel="author">wakaba@suikawiki.org</a>&gt;</code>.</p>
 
 <p>This library is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.</p>

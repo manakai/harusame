@@ -3,8 +3,7 @@
 <title lang=ja data-lang-content=title>harusame</title>
 <link rel=author href="#author">
 <link rel=license href="#license">
-<link rel=feed href=harusame-commit type="application/atom+xml">
-<link rel=stylesheet href="http://suika.fam.cx/www/style/html/xhtml">
+<link rel=stylesheet href="http://suika.suikawiki.org/www/style/html/xhtml">
 
 <h1 data-lang-container id=title>
 <span lang=en><i lang=ja>Harusame</i> &mdash; Multilingual
@@ -266,19 +265,18 @@ href="readme.html.src">春雨の使い方の例として、
 
 <p data-lang-container>
 
-<span lang=en>It also depends on <a
-href="http://suika.fam.cx/www/manakai-core/doc/web/">manakai-core</a>
-and <a
-href="http://suika.fam.cx/www/markup/html/whatpm/readme">Whatpm</a>
-packages, which are included as part of the standard <i
-lang=ja>harusame</i> distribution.</span>
+<span lang=en>It also depends
+on <a href="http://suika.suikawiki.org/www/manakai-core/doc/web/">manakai-core</a>
+and
+<a href=http://suika.suikawiki.org/www/charclass/readme>CharClass</a>
+packages, which are submodules of the <i lang=ja>harusame</i> Git
+repository.</span>
 
 <span lang=ja>春雨は<a
-href="http://suika.fam.cx/www/manakai-core/doc/web/">manakai-core</a> 
+href="http://suika.suikawiki.org/www/manakai-core/doc/web/">manakai-core</a> 
 と <a
-href="http://suika.fam.cx/www/markup/html/whatpm/readme">Whatpm</a> 
-も使っていますが、
-通常の春雨のパッケージに含まれているので別途用意する必要はありません。</span>
+href="http://suika.suikawiki.org/www/charclass/readme">CharClass</a>
+も使っています (Git リポジトリーのサブモジュールです)。</span>
 
 </div>
 
@@ -288,20 +286,22 @@ href="http://suika.fam.cx/www/markup/html/whatpm/readme">Whatpm</a>
 <p data-lang-container>
 
 <span lang=en><i lang=ja>Harusame</i> is developed using Git.  Git
-repository (<a
-href="http://suika.fam.cx/gate/git/wi/harusame.git/">Suika</a> / <a
+repository (<!--<a
+href="http://suika.fam.cx/gate/git/wi/harusame.git/">Suika</a> / --><a
 href="https://github.com/wakaba/harusame">GitHub</a>) can be cloned by
 the following commands:</span>
 
-<span lang=ja>春雨は Git を使って開発しています。 Git リポジトリ(<a
-href="http://suika.fam.cx/gate/git/wi/harusame.git/">Suika</a> / <a
+<span lang=ja>春雨は Git を使って開発しています。 Git リポジトリ(<!--<a
+href="http://suika.fam.cx/gate/git/wi/harusame.git/">Suika</a> / --><a
 href="https://github.com/wakaba/harusame">GitHub</a>) は次のようにして 
 clone できます。</span>
 
-<pre>
+<pre id=setup>
 $ <kbd>git clone git://github.com/wakaba/harusame.git</kbd><!--
 $ <kbd>git clone http://suika.fam.cx/gate/git/bare/harusame.git/</kbd>-->
-$ <kbd>git submodule update --init</kbd>
+$ <kbd>cd harusame</kbd>
+$ <kbd>make deps</kbd>
+$ <kbd>./harusame</kbd>
 </pre>
 
 <!--
@@ -316,65 +316,13 @@ tarball for the latest version</a> is also available.
 
 </div>
 
-<div class=section id=setup>
-<h2 data-lang-container>
-  <span lang=en>Setup</span>
-  <span lang=ja>セットアップ</span>
-</h2>
-
-<p data-lang-container>
-
-<span lang=en>The spec file for the <i lang=ja>harusame</i> RPM
-package is available in the directory <code>config/rpm/</code>.  You
-can build a noarch and source RPM packages by:</span>
-
-<span lang=ja>春雨の RPM パッケージ用の spec ファイルがディレクトリー 
-<code>config/rpm/</code> に入っていますから、</span>
-
-<pre lang=en>
-$ <kbd>cd config/rpm</kbd>
-$ <kbd>make build</kbd>
-</pre>
-
-<p data-lang-container>
-
-<span lang=en>... and then install the generated package by:</span>
-
-<span lang=ja>... のようにして noarch RPM パッケージとソース RPM 
-パッケージを作ることができます。その上で、</span>
-
-<pre lang=en>
-$ <kbd>rpm -ivh ~/rpm/RPMS/noarch/harusame-<var>version</var>.noarch.rpm</kbd>
-</pre>
-
-<p data-lang-container>
-
-<span lang=en>If your are familiar with Perl, you can use
-<code>Makefile.PL</code> directry to install the tarball
-package.</span>
-
-<span lang=ja>... という感じで、生成されたパッケージを
-インストールしてください。Perl に詳しい方であれば、
-tar 玉から直接 <code>Makefile.PL</code> 
-を使ってインストールすることもできます。</span>
-
-<p data-lang-container>
-
-<span lang=en>Alternatively, just copying the files to your favorite
-directory does work, too.</span>
-
-<span lang=ja>あるいは、単にファイルを好きなディレクトリーに
-複製するだけでも十分です。</span>
-
-</div>
-
 <div class="section" id="author">
 <h2 data-lang-container>
 <span lang=en>Author</span>
 <span lang=ja>著者</span>
 </h2>
 
-<p><a href="http://suika.fam.cx/~wakaba/who?" rel="author">Wakaba</a>.</p>
+<p><a href="http://suika.suikawiki.org/~wakaba/who?" rel="author">Wakaba</a>.</p>
 </div>
 
 <div class="section" id="license">
@@ -383,10 +331,10 @@ directory does work, too.</span>
 <span lang=ja>ライセンス</span>
 </h2>
 
-<p>Copyright 2008-2011 <a
-href="http://suika.fam.cx/~wakaba/who?">Wakaba</a> <code
-class="mail">&lt;<a href="mailto:w@suika.fam.cx"
-rel="author">w@suika.fam.cx</a>></code>.</p>
+<p>Copyright
+2008-2015 <a href="http://suika.suikawiki.org/~wakaba/who?">Wakaba</a> 
+<code class="mail">&lt;<a href="mailto:wakaba@suikawiki.org"
+rel="author">wakaba@suikawiki.org</a>></code>.</p>
 
 <p>This library is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.</p>

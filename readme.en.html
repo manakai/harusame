@@ -2,8 +2,7 @@
 Web page management tool</title>
 <link href="#author" rel="author">
 <link href="#license" rel="license">
-<link href="harusame-commit" rel="feed" type="application/atom+xml">
-<link href="http://suika.fam.cx/www/style/html/xhtml" rel="stylesheet">
+<link href="http://suika.suikawiki.org/www/style/html/xhtml" rel="stylesheet">
 
 </head><body><h1 data-lang-container="" id="title"><span lang="en"><i lang="ja">Harusame</i> — Multilingual
 Web page management tool</span></h1>
@@ -179,19 +178,25 @@ document to learn it can be used</a>.</span></p></div>
 <div class="section" id="dependency">
 <h2 data-lang-container=""><span lang="en">Dependency</span></h2>
 
-<p data-lang-container=""><span lang="en">This software requires Perl 5.8 or later.</span></p><p data-lang-container=""><span lang="en">It also depends on <a href="http://suika.fam.cx/www/manakai-core/doc/web/">manakai-core</a>
-and <a href="http://suika.fam.cx/www/markup/html/whatpm/readme">Whatpm</a>
-packages, which are included as part of the standard <i lang="ja">harusame</i> distribution.</span></p></div>
+<p data-lang-container=""><span lang="en">This software requires Perl 5.8 or later.</span></p><p data-lang-container=""><span lang="en">It also depends
+on <a href="http://suika.suikawiki.org/www/manakai-core/doc/web/">manakai-core</a>
+and
+<a href="http://suika.suikawiki.org/www/charclass/readme">CharClass</a>
+packages, which are submodules of the <i lang="ja">harusame</i> Git
+repository.</span></p></div>
 
 <div class="section" id="download">
 <h2>Download</h2>
 
 <p data-lang-container=""><span lang="en"><i lang="ja">Harusame</i> is developed using Git.  Git
-repository (<a href="http://suika.fam.cx/gate/git/wi/harusame.git/">Suika</a> / <a href="https://github.com/wakaba/harusame">GitHub</a>) can be cloned by
-the following commands:</span></p><pre>
+repository (<!--<a
+href="http://suika.fam.cx/gate/git/wi/harusame.git/">Suika</a> / --><a href="https://github.com/wakaba/harusame">GitHub</a>) can be cloned by
+the following commands:</span></p><pre id="setup">
 $ <kbd>git clone git://github.com/wakaba/harusame.git</kbd><!--
 $ <kbd>git clone http://suika.fam.cx/gate/git/bare/harusame.git/</kbd>-->
-$ <kbd>git submodule update --init</kbd>
+$ <kbd>cd harusame</kbd>
+$ <kbd>make deps</kbd>
+$ <kbd>./harusame</kbd>
 </pre>
 
 <!--
@@ -206,35 +211,18 @@ tarball for the latest version</a> is also available.
 
 </div>
 
-<div class="section" id="setup">
-<h2 data-lang-container=""><span lang="en">Setup</span></h2>
-
-<p data-lang-container=""><span lang="en">The spec file for the <i lang="ja">harusame</i> RPM
-package is available in the directory <code>config/rpm/</code>.  You
-can build a noarch and source RPM packages by:</span></p><pre lang="en">
-$ <kbd>cd config/rpm</kbd>
-$ <kbd>make build</kbd>
-</pre>
-
-<p data-lang-container=""><span lang="en">... and then install the generated package by:</span></p><pre lang="en">
-$ <kbd>rpm -ivh ~/rpm/RPMS/noarch/harusame-<var>version</var>.noarch.rpm</kbd>
-</pre>
-
-<p data-lang-container=""><span lang="en">If your are familiar with Perl, you can use
-<code>Makefile.PL</code> directry to install the tarball
-package.</span></p><p data-lang-container=""><span lang="en">Alternatively, just copying the files to your favorite
-directory does work, too.</span></p></div>
-
 <div class="section" id="author">
 <h2 data-lang-container=""><span lang="en">Author</span></h2>
 
-<p><a href="http://suika.fam.cx/~wakaba/who?" rel="author">Wakaba</a>.</p>
+<p><a href="http://suika.suikawiki.org/~wakaba/who?" rel="author">Wakaba</a>.</p>
 </div>
 
 <div class="section" id="license">
 <h2 data-lang-container=""><span lang="en">License</span></h2>
 
-<p>Copyright 2008-2011 <a href="http://suika.fam.cx/~wakaba/who?">Wakaba</a> <code class="mail">&lt;<a href="mailto:w@suika.fam.cx" rel="author">w@suika.fam.cx</a>&gt;</code>.</p>
+<p>Copyright
+2008-2015 <a href="http://suika.suikawiki.org/~wakaba/who?">Wakaba</a> 
+<code class="mail">&lt;<a href="mailto:wakaba@suikawiki.org" rel="author">wakaba@suikawiki.org</a>&gt;</code>.</p>
 
 <p>This library is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.</p>

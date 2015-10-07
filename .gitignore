@@ -9,3 +9,11 @@ pod2htmd.tmp
 blib
 *.gz
 pm_to_blib
+/local/
+/perl
+/prove
+/plackup
+/Makefile.setupenv
+/cin
+/config/perl/libs.txt
+/harusame

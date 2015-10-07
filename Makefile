@@ -54,6 +54,6 @@ test: test-deps test-main
 test-deps: deps
 
 test-main:
-	$(PROVE) t/*.t
+	$(HARUSAME) --lang ja < readme.html.src > /dev/null
 
 ## License: Public Domain

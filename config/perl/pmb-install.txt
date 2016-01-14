@@ -8,7 +8,7 @@ Module::Build~0.4214
 Getopt::Long~2.48
 Try::Tiny~0.24
 parent~0.234
-Exporter::Lite~0.07
+Exporter::Lite~0.08
 Test::Class~0.50
 ExtUtils::ParseXS~3.30
 Data::Dumper~2.154

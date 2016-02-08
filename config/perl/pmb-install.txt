@@ -1,7 +1,7 @@
 Capture::Tiny~0.30
 Pod::Usage~1.68
 Pod::Text~4.06
-Encode~2.80
+Encode~2.82
 CPAN::Meta~2.150005
 Time::Local~1.2300
 Module::Build~0.4216

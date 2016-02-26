@@ -1,4 +1,4 @@
-Capture::Tiny~0.30
+Capture::Tiny~0.34
 Pod::Usage~1.68
 Pod::Text~4.06
 Encode~2.82
@@ -16,7 +16,7 @@ Text::Diff~1.43
 Test::More~1.001014
 Test::Differences~0.64
 CPAN::Meta::Requirements~2.140
-Path::Class~0.35
+Path::Class~0.36
 Module::Metadata~1.000027
 Module::Runtime~0.014
 Test~1.26
@@ -25,7 +25,7 @@ MRO::Compat~0.12
 Algorithm::Diff~1.1903
 ExtUtils::CBuilder~0.280224
 Parse::CPAN::Meta~1.4417
-version~0.9912
+version~0.9914
 CPAN::Meta::YAML~0.018
 TAP::Harness~3.36
 Exporter~5.72

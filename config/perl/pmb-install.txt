@@ -12,7 +12,7 @@ Exporter::Lite~0.08
 Test::Class~0.50
 ExtUtils::ParseXS~3.30
 Data::Dumper~2.154
-Text::Diff~1.43
+Text::Diff~1.44
 Test::More~1.001014
 Test::Differences~0.64
 CPAN::Meta::Requirements~2.140

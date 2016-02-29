@@ -1,4 +1,4 @@
-Capture::Tiny~0.34
+Capture::Tiny~0.36
 Pod::Usage~1.68
 Pod::Text~4.06
 Encode~2.82

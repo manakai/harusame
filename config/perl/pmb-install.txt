@@ -4,7 +4,7 @@ Pod::Text~4.07
 Encode~2.84
 CPAN::Meta~2.150005
 Time::Local~1.2300
-Module::Build~0.4216
+Module::Build~0.4218
 Try::Tiny~0.24
 Getopt::Long~2.48
 parent~0.234

@@ -1,3 +1,5 @@
+git:
+  submodules: false
 language: perl
 perl:
   - "5.22"
@@ -11,7 +13,7 @@ notifications:
     - wakaba@suikawiki.org
   irc:
     channels:
-      - "irc.suikawiki.org#mechanize"
+      - "ircs://irc.suikawiki.org:6697#mechanize"
     use_notice: true
 env:
   global:

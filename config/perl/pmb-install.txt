@@ -9,7 +9,7 @@ Exporter::Lite~0.08
 Getopt::Long~2.5
 JSON~2.94
 MRO::Compat~0.13
-Module::Runtime~0.015
+Module::Runtime~0.016
 Path::Class~0.37
 Path::Tiny~0.104
 Pod::Text~4.09

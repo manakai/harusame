@@ -7,7 +7,7 @@ Encode~2.93
 Exporter~5.72
 Exporter::Lite~0.08
 Getopt::Long~2.5
-JSON~2.96
+JSON~2.97000
 MRO::Compat~0.13
 Module::Runtime~0.016
 Path::Class~0.37
@@ -17,7 +17,7 @@ Pod::Usage~1.69
 Test~1.26
 Test::Class~0.50
 Test::Differences~0.64
-Test::More~1.302111
+Test::More~1.302112
 Text::Diff~1.45
 Time::Local~1.25
 Try::Tiny~0.28

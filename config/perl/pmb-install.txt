@@ -1,9 +1,9 @@
 
 Algorithm::Diff~1.1903
-Capture::Tiny~0.46
+Capture::Tiny~0.48
 Carp~1.38
 Data::Dumper~2.161
-Encode~2.97
+Encode~2.98
 Exporter~5.72
 Exporter::Lite~0.08
 Getopt::Long~2.5
@@ -17,7 +17,7 @@ Pod::Usage~1.69
 Test~1.26
 Test::Class~0.50
 Test::Differences~0.64
-Test::More~1.302136
+Test::Simple~1.302136
 Text::Diff~1.45
 Time::Local~1.25
 Try::Tiny~0.30

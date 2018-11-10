@@ -2,7 +2,7 @@
 Algorithm::Diff~1.1903
 Capture::Tiny~0.48
 Carp~1.50
-Data::Dumper~2.172
+Data::Dumper~2.173
 Encode~2.98
 Exporter~5.73
 Exporter::Lite~0.08

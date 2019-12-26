@@ -12,7 +12,7 @@ MRO::Compat~0.13
 Module::Runtime~0.016
 Path::Class~0.37
 Path::Tiny~0.108
-Pod::Text~4.12
+Pod::Text~4.13
 Pod::Usage~1.69
 Test~1.26
 Test::Class~0.50

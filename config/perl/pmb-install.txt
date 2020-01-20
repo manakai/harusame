@@ -4,7 +4,7 @@ Capture::Tiny~0.48
 Carp~1.50
 Data::Dumper~2.173
 Encode~3.02
-Exporter~5.73
+Exporter~5.74
 Exporter::Lite~0.08
 Getopt::Long~2.51
 JSON~4.02

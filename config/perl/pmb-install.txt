@@ -17,7 +17,7 @@ Pod::Usage~1.70
 Test~1.26
 Test::Class~0.50
 Test::Differences~0.67
-Test::Simple~1.302174
+Test::More~1.302175
 Text::Diff~1.45
 Time::Local~1.30
 Try::Tiny~0.30

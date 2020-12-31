@@ -1,9 +1,9 @@
 
-Algorithm::Diff~1.1903
+Algorithm::Diff~1.201
 Capture::Tiny~0.48
 Carp~1.50
 Data::Dumper~2.173
-Encode~3.07
+Encode~3.08
 Exporter~5.74
 Exporter::Lite~0.08
 Getopt::Long~2.52
@@ -12,12 +12,14 @@ MRO::Compat~0.13
 Module::Runtime~0.016
 Path::Class~0.37
 Path::Tiny~0.114
+Pod::Perldoc~3.28
+Pod::Simple~3.42
 Pod::Text~4.14
-Pod::Usage~1.70
+Pod::Usage~2.01
 Test~1.26
 Test::Class~0.50
 Test::Differences~0.67
-Test::More~1.302177
+Test::Simple~1.302183
 Text::Diff~1.45
 Time::Local~1.30
 Try::Tiny~0.30

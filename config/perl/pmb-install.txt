@@ -2,7 +2,7 @@
 Algorithm::Diff~1.201
 Capture::Tiny~0.48
 Carp~1.50
-Data::Dumper~2.181
+Data::Dumper~2.183
 Encode~3.10
 Exporter~5.74
 Exporter::Lite~0.08
@@ -13,7 +13,7 @@ Module::Runtime~0.016
 Path::Class~0.37
 Path::Tiny~0.118
 Pod::Perldoc~3.28
-Pod::Simple~3.42
+Pod::Simple~3.43
 Pod::Text~4.14
 Pod::Usage~2.01
 Test~1.26

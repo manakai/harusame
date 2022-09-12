@@ -153,16 +153,16 @@ C<lang=""> attribute.
 
 =head1 SEE ALSO
 
-Readme L<http://suika.fam.cx/www/harusame/readme>.  How to mark up the
-source HTML document is described in this document.
+Readme L<https://suika.suikawiki.org/www/harusame/readme>.  How to
+mark up the source HTML document is described in this document.
 
 =head1 AUTHOR
 
-Wakaba <w@suika.fam.cx>.
+Wakaba <wakaba@suikawiki.org>.
 
 =head1 LICENSE
 
-Copyright 2008, 2010 Wakaba <w@suika.fam.cx>.
+Copyright 2008, 2010 Wakaba <wakaba@suikawiki.org>.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

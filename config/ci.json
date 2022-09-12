@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "name": "Harusame",
+    "summary": "Multilingual Web site management",
+    "url": "https://suika.suikawiki.org/www/harusame/readme",
+    "license": "perl",
+    "author": "Wakaba",
+    "history": [
+      {"type": "started", "time": "2008"},
+      {"type": "transferred", "time": "2022-09-12",
+       "old_url": "https://github.com/wakaba/harusame",
+       "new_url": "https://github.com/manakai/harusame"}
+    ],
+    "deps": ["perl5.8+"]
+  },
+  "github": {
+    "pmbp": true,
+    "gaa": true,
+    "merger": true
+  }
+}

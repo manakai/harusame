@@ -30,24 +30,58 @@ pmbp-update: git-submodules pmbp-upgrade
 pmbp-install: pmbp-upgrade
 	perl local/bin/pmbp.pl $(PMBP_OPTIONS) --install \
             --create-perl-command-shortcut @perl \
-            --create-perl-command-shortcut @prove \
-	    --create-perl-command-shortcut @harusame=perl\ bin/harusame.pl
+            --create-perl-command-shortcut @prove
 
 ## ------ Build ------
 
+PERL = ./perl
 HARUSAME = ./harusame
 
-build: deps build-docs build-bin
+build: deps build-harusame build-docs build-bin
 
 build-bin:
 	cd bin && $(MAKE) build
 
 build-docs: readme.en.html readme.ja.html
 
-%.en.html: %.html.src
+%.en.html: %.html.src $(HARUSAME)
 	$(HARUSAME) --lang en < $< > $@
-%.ja.html: %.html.src
+%.ja.html: %.html.src $(HARUSAME)
 	$(HARUSAME) --lang ja < $< > $@
+
+build-harusame: deps-fatpack $(HARUSAME)
+
+deps-fatpack:
+	$(PERL) local/bin/pmbp.pl $(PMBP_OPTIONS) \
+	    --install-module App::FatPacker \
+	    --create-perl-command-shortcut @local/fatpack=fatpack
+
+## For modules that have .packlist
+local/fatpacker.trace: bin/harusame.pl
+	local/fatpack trace --to=$@ bin/harusame.pl
+## For the other modules
+local/module-list.sh: bin/create-module-list.pl bin/harusame.pl
+	$(PERL) $< > $@
+local/fatpacker.packlists: local/fatpacker.trace
+	local/fatpack packlists-for `cat $<` > $@
+
+PERL_ARCHNAME = $(shell $(PERL) -MConfig -e 'print $$Config{archname}')
+
+local/fatlib-files: local/fatpacker.packlists local/module-list.sh
+	cd local && ./fatpack tree `cat ../local/fatpacker.packlists`
+	bash local/module-list.sh
+	cp -a local/fatlib/$(PERL_ARCHNAME)/* local/fatlib/
+	rm -fr local/fatlib/$(PERL_ARCHNAME)
+	rm -fr local/fatlib/Encode.pm local/fatlib/Encode/
+	rm -fr local/fatlib/auto/Encode/
+	ls -R local/fatlib
+
+$(HARUSAME): bin/harusame.pl local/fatlib-files
+	echo '#!/usr/bin/env perl' > $@
+	cd local && ./fatpack file ../$< >> ../$@
+	-git diff harusame | cat
+	perl -c $@
+	chmod u+x $@
 
 ## ------ Tests ------
 

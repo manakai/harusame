@@ -3,7 +3,7 @@
 <title lang=ja data-lang-content=title>harusame</title>
 <link rel=author href="#author">
 <link rel=license href="#license">
-<link rel=stylesheet href="http://suika.suikawiki.org/www/style/html/xhtml">
+<link rel=stylesheet href="https://suika.suikawiki.org/www/style/html/xhtml">
 
 <h1 data-lang-container id=title>
 <span lang=en><i lang=ja>Harusame</i> &mdash; Multilingual
@@ -266,16 +266,16 @@ href="readme.html.src">春雨の使い方の例として、
 <p data-lang-container>
 
 <span lang=en>It also depends
-on <a href="http://suika.suikawiki.org/www/manakai-core/doc/web/">manakai-core</a>
+on <a href="https://suika.suikawiki.org/www/manakai-core/doc/web/">manakai-core</a>
 and
-<a href=http://suika.suikawiki.org/www/charclass/readme>CharClass</a>
+<a href=https://suika.suikawiki.org/www/charclass/readme>CharClass</a>
 packages, which are submodules of the <i lang=ja>harusame</i> Git
 repository.</span>
 
 <span lang=ja>春雨は<a
-href="http://suika.suikawiki.org/www/manakai-core/doc/web/">manakai-core</a> 
+href="https://suika.suikawiki.org/www/manakai-core/doc/web/">manakai-core</a> 
 と <a
-href="http://suika.suikawiki.org/www/charclass/readme">CharClass</a>
+href="https://suika.suikawiki.org/www/charclass/readme">CharClass</a>
 も使っています (Git リポジトリーのサブモジュールです)。</span>
 
 </div>
@@ -297,7 +297,7 @@ href="https://github.com/wakaba/harusame">GitHub</a>) は次のようにして
 clone できます。</span>
 
 <pre id=setup>
-$ <kbd>git clone git://github.com/wakaba/harusame.git</kbd><!--
+$ <kbd>git clone https://github.com/wakaba/harusame.git</kbd><!--
 $ <kbd>git clone http://suika.fam.cx/gate/git/bare/harusame.git/</kbd>-->
 $ <kbd>cd harusame</kbd>
 $ <kbd>make deps</kbd>
@@ -322,7 +322,7 @@ tarball for the latest version</a> is also available.
 <span lang=ja>著者</span>
 </h2>
 
-<p><a href="http://suika.suikawiki.org/~wakaba/who?" rel="author">Wakaba</a>.</p>
+<p><a href="https://suika.suikawiki.org/~wakaba/who?" rel="author">Wakaba</a>.</p>
 </div>
 
 <div class="section" id="license">

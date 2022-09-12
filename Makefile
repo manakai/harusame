@@ -37,7 +37,10 @@ pmbp-install: pmbp-upgrade
 
 HARUSAME = ./harusame
 
-build: deps build-docs
+build: deps build-docs build-bin
+
+build-bin:
+	cd bin && $(MAKE) build
 
 build-docs: readme.en.html readme.ja.html
 

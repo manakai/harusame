@@ -1,107 +1,80 @@
-<?xml version="1.0" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>harusame.pl - Multilingual Web page management tool</title>
-<link rel="stylesheet" href="http://suika.fam.cx/www/style/html/pod.css" type="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link rel=author href="#author">
-</head>
 
-<body>
+      <!DOCTYPE HTML>
+      <html lang=en>
+        <meta charset=utf-8>
+        <title>Harusame</title>
+        <link rel=stylesheet href="https://manakai.github.io/css/pod.css">
+        <meta name=viewport content="width=device-width">
+
+        <h1><a href="../" rel=top>Harusame</a></h1>
+
+        
 
 
-<!-- INDEX BEGIN -->
-<div name="index">
-<p><a name="__index__"></a></p>
 
-<ul>
 
-	<li><a href="#name">NAME</a></li>
-	<li><a href="#synopsis">SYNOPSIS</a></li>
-	<li><a href="#description">DESCRIPTION</a></li>
-	<li><a href="#arguments">ARGUMENTS</a></li>
-	<li><a href="#see_also">SEE ALSO</a></li>
-	<li><a href="#author">AUTHOR</a></li>
-	<li><a href="#license">LICENSE</a></li>
-</ul>
 
-<hr name="index" />
-</div>
-<!-- INDEX END -->
+<hgroup><h1><code>harusame</code></h1><h2>Multilingual Web page management tool</h2></hgroup><section id="SYNOPSIS"><h1>SYNOPSIS</h1>
 
-<p>
-</p>
-<h1><a name="name">NAME</a></h1>
-<p>harusame.pl - Multilingual Web page management tool</p>
-<p>
-</p>
-<hr />
-<h1><a name="synopsis">SYNOPSIS</a></h1>
-<pre>
-  perl harusame.pl --lang LANGCODE &lt; input.html &gt; output.html</pre>
-<pre>
-  perl harusame.pl --help</pre>
-<p>
-</p>
-<hr />
-<h1><a name="description">DESCRIPTION</a></h1>
-<p>The <code>harusame.pl</code> script extracts a version of the HTML document
-written in the specified natural language, from a source HTML document
-that contains paragraphs in multiple natural languages.</p>
-<p>The document management of a multilingual Web site where there are
-multiple versions of a (conceptually same) document is somewhat
-difficult in general.  If the author of an HTML document wants to edit
-a part of the document, then he or she has to ensure not to forget
-updating translations at the same time, otherwise documents in
-different language versions also differ in their content versions.</p>
-<p>Using the <code>harusame.pl</code>, one can generate versions of an HTML
-document in different language from one source HTML document that
-contains paragraphs written in all of those languages, such that
-authors no longer have to manage different content versions and
-different language versions in separate files.</p>
-<p>
-</p>
-<hr />
-<h1><a name="arguments">ARGUMENTS</a></h1>
-<p>The source document must be provided to the script using the
-<em>standard input</em>.  It must be encoded in UTF-8.</p>
-<p>The script outputs the generated document encoded in UTF-8 to the
-<em>standard output</em>.</p>
+<pre><code>  $ harusame --lang LANGCODE &lt; input.html &gt; output.html
+
+  $ harusame --help</code></pre>
+
+</section><section id="DESCRIPTION"><h1>DESCRIPTION</h1>
+
+<p>The <code>harusame</code> script extracts a version of the HTML document written in the specified natural language, from a source HTML document that contains paragraphs in multiple natural languages.</p>
+
+<p>The document management of a multilingual Web site where there are multiple versions of a (conceptually same) document is somewhat difficult in general. If the author of an HTML document wants to edit a part of the document, then he or she has to ensure not to forget updating translations at the same time, otherwise documents in different language versions also differ in their content versions.</p>
+
+<p>Using the <code>harusame</code>, one can generate versions of an HTML document in different language from one source HTML document that contains paragraphs written in all of those languages, such that authors no longer have to manage different content versions and different language versions in separate files.</p>
+
+</section><section id="ARGUMENTS"><h1>ARGUMENTS</h1>
+
+<p>The source document must be provided to the script using the <var>standard input</var>. It must be encoded in UTF-8.</p>
+
+<p>The script outputs the generated document encoded in UTF-8 to the <var>standard output</var>.</p>
+
 <p>Following command-line options are available to this script:</p>
+
 <dl>
-<dt><strong><a name="help" class="item"><code>--help</code></a></strong></dt>
+<dt id="--help"><code>--help</code></dt>
 
 <dd>
 <p>Show the help message and exit.</p>
-</dd>
-<dt><strong><a name="langcode" class="item"><code>--lang LANGCODE</code> (<strong>REQUIRED</strong>)</a></strong></dt>
+
+</dd><dt id="--lang_LANGCODE_(REQUIRED)"><code>--lang <i>LANGCODE</i></code> (<b>REQUIRED</b>)</dt>
 
 <dd>
-<p>The language of the version to generate.  This option must be
-specified.  The value must be a value that is valid for HTML
-<code>lang=&quot;&quot;</code> attribute.</p>
+<p>The language of the version to generate. This option must be specified. The value must be a value that is valid for HTML <code>lang=""</code> attribute.</p>
 </dd>
 </dl>
-<p>
-</p>
-<hr />
-<h1><a name="see_also">SEE ALSO</a></h1>
-<p>Readme <a href="http://suika.fam.cx/www/harusame/readme">http://suika.fam.cx/www/harusame/readme</a>.  How to mark up the
-source HTML document is described in this document.</p>
-<p>
-</p>
-<hr />
-<h1><a name="author">AUTHOR</a></h1>
-<p>Wakaba &lt;<a href="mailto:w@suika.fam.cx">w@suika.fam.cx</a>&gt;.</p>
-<p>
-</p>
-<hr />
-<h1><a name="license">LICENSE</a></h1>
-<p>Copyright 2008, 2010 Wakaba &lt;<a href="mailto:w@suika.fam.cx">w@suika.fam.cx</a>&gt;.</p>
-<p>This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.</p>
 
-</body>
+</section><section id="SEE_ALSO"><h1>SEE ALSO</h1>
 
-</html>
+<p>Readme <a href="https://suika.suikawiki.org/www/harusame/readme" class="podlinkurl">https://suika.suikawiki.org/www/harusame/readme</a>. How to mark up the source HTML document is described in this document.</p>
+
+</section><section id="AUTHOR"><h1>AUTHOR</h1>
+
+<p>Wakaba &lt;wakaba@suikawiki.org&gt;.</p>
+
+</section><section id="LICENSE"><h1>LICENSE</h1>
+
+<p>Copyright 2008, 2010 Wakaba &lt;wakaba@suikawiki.org&gt;.</p>
+
+<p>This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+
+
+
+</section>
+
+        <sw-ads normal></sw-ads>
+        <script src="https://manakai.github.io/js/global.js" async></script>
+
+        <footer>
+          <ul>
+          <li><a href="../" rel=top>Top</a>
+          </ul>
+        </footer>
+        <sw-ads-notes></sw-ads-notes>
+    

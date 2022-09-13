@@ -36,10 +36,11 @@ pmbp-install: pmbp-upgrade
 
 PERL = ./perl
 HARUSAME = ./harusame
+P2H = local/p2h
 
 build: deps build-harusame build-docs build-bin
 
-build-bin:
+build-bin: $(P2H)
 	cd bin && $(MAKE) build
 
 build-docs: readme.en.html readme.ja.html
@@ -81,6 +82,10 @@ $(HARUSAME): bin/harusame.pl local/fatlib-files
 	cd local && ./fatpack file ../$< >> ../$@
 	-git diff harusame | cat
 	perl -c $@
+	chmod u+x $@
+
+local/p2h:
+	$(CURL) -sSfL https://raw.githubusercontent.com/manakai/manakai.github.io/master/p2h > $@
 	chmod u+x $@
 
 ## ------ Tests ------

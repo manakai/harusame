@@ -7,7 +7,7 @@ Encode~3.19
 Exporter~5.74
 Exporter::Lite~0.09
 Getopt::Long~2.52
-JSON~4.09
+JSON~4.10
 MRO::Compat~0.15
 Module::Build~0.4231
 Module::Runtime~0.016

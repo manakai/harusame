@@ -6,7 +6,7 @@ Data::Dumper~2.183
 Encode~3.19
 Exporter~5.74
 Exporter::Lite~0.09
-Getopt::Long~2.52
+Getopt::Long~2.54
 JSON~4.10
 MRO::Compat~0.15
 Module::Build~0.4231
@@ -18,7 +18,7 @@ Pod::Usage~2.03
 Test~1.26
 Test::Class~0.52
 Test::Differences~0.69
-Test::More~1.302191
+Test::Simple~1.302191
 Text::Diff~1.45
 Time::Local~1.30
 Try::Tiny~0.31
